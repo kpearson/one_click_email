@@ -9,7 +9,7 @@ describe "Order" do
   it 'Clicking Order Now button takes the user to the order page showing order details' do
     create_order
     save_and_open_page
-    expect(page).to have_content("Confirm Order")
+    expect(page).to have_content("Order Confirmed")
     expect(page).to have_content("Rusty Hammer")
   end
 

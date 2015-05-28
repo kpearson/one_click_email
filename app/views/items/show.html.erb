@@ -5,7 +5,9 @@
     <%= image_tag(@item.image_url) %>
     <p>
       <%= @item.description %>
-      <%= link_to "Order Now", create_order_path(item_id: @item.id) %>
+      <%= link_to "Order Now", create_order_path(item: { id: @item.id},
+                                                 order: { user_id: User.first }),
+      method: :post %>
     </p>
   </div>
 </div>

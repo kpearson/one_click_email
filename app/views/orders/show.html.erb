@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <h1> Order Confirmed </h1>
+      <h2> Order No. <%= @order.id %> </h2>
+    </div>
+  </div>
+  <div class="row"></div>
+    <div class="col-sm-12">
+      <h3>Item name: <%= link_to @order.items.first.name, item_path(@order.items.first) %></h3>
+      <h4>Item description: <%= @order.items.first.description %></h3>
+    </div>
+  </div>
+</div>
+
