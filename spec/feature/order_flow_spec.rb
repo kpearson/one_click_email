@@ -6,11 +6,11 @@ describe "Order" do
     expect(page).to have_content("Order Now")
   end
 
-  xit 'Clicking Order Now button takes the user to the order page showing order details' do
+  it 'Clicking Order Now button takes the user to the order page showing order details' do
     create_order
+    save_and_open_page
     expect(page).to have_content("Confirm Order")
-    expect(page).to have_content("Total: $10.00")
-    expect(page).to have_content("Item name")
+    expect(page).to have_content("Rusty Hammer")
   end
 
   xit 'Order trigers an email notification to the admin' do
